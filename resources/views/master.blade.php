@@ -32,6 +32,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{url('datatable')}}">DataTable</a>
           </li>
+           <li class="nav-item">
+            <a class="nav-link" href="{{url('ajaxdata')}}">ajaxdata</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link 3</a>
           </li>
@@ -52,6 +55,7 @@
 @yield('showcreate')
 @yield('editcreate')
 @yield('datatable')
+@yield('ajaxdata')
 
 </body>
 </html>

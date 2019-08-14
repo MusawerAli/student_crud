@@ -13,7 +13,9 @@
 Route::get('sayhello','Hellocontroller@index')->middleware('test');
 Route::get('/', function () {
     // return view('welcome');
-    echo url('admin',['43']);
+    //echo url('admin',['43']);
+    return view('form');
+
 });
 Route::get('getData/{value}/{da?}','Getdatacontroller@index')->where([
     'value' => "[0-9]+"
@@ -30,4 +32,5 @@ Route::post('/formData','form@formData')->name('formSubmit');
 Route::resource('students','StudentController');
 Route::get('datatable','dataTable@index')->name('datatable');
 Route::get('getdata','dataTable@getdata')->name('da.getdata');
-
+Route::get('ajaxdata','AjaxdataController@index')->name('ajaxdata');
+Route::get('datatableData','AjaxdataController@getdatatables')->name('ajaxdata.getdatatables');
